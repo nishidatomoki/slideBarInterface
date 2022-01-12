@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライダ</title>
+</head>
+<body>
+    <table border="1">
+       <tr>
+        <th> 番　号 </th>
+        <th> 項 目 </th>
+         <th>説 明</th>
+       </tr>
+       <tr>
+        <td> 1 </td>
+         <td>精神的要求 </td>
+         <td>どの程度，精神的かつ知覚的活動が要求されましたか？（例．思考，意志決定，計算，記憶，観察等）</td>
+       </tr>
+       <tr>
+        <td> 2 </td>
+         <td>身体的要求</td>
+         <td>どの程度，身体的活動が必要でしたか？（例．発話する，ジェスチャーをする， 操作する等）</td>
+       </tr>
+       <tr>
+        <td> 3 </td>
+         <td>時間切迫感</td>
+         <td>作業や要素作業の頻度や速さにどの程度，時間的圧迫感を感じましたか？作業ペースはゆっくりしていて暇でしたか，それとも急速で大変でしたか．</td>
+       </tr>
+       <tr>
+        <td> 4 </td>
+         <td>作業達成度</td>
+         <td>実験者（あるいは，あなた自身）によって設定された作業の達成目標の遂行について，どの程度成功したと思いますか？この目標達成における作業成績にどのくらい満足していますか？</td>
+       </tr>
+       <tr>
+        <td> 5 </td>
+         <td>努力</td>
+         <td>あなたの作業達成レベルに到達するのにどのくらい一生懸命（精神的および身体的に）作業を行わなければなりませんでしたか？</td>
+       </tr>
+       <tr>
+        <td> 6 </td>
+         <td>不満</td>
+         <td>作業中，どのくらい，不安，落胆，いらいら，ストレス，不快感を感じましたか？</td>
+       </tr>
+       <tr>
+        <td> 7 </td>
+         <td>全体的負担</td>
+         <td>全体として作業にどの程度負担を感じましたか？</td>
+       </tr>
+
+     </table>
+    <div>
+        <h3>
+            1 <input id="val1" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value1" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            2 <input id="val2" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value2" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            3 <input id="val3" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value3" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            4 <input id="val4" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value4" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            5 <input id="val5" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value5" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            6 <input id="val6" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value6" style="font-weight: normal;">0</span>
+        </h3>
+        <h3>
+            7 <input id="val7" type="range" min="0" max="100" value="0" style="width: 70%;"> 
+            <span id="value7" style="font-weight: normal;">0</span>
+        </h3>
+    </div> 
+</div>
+<script>
+    var elem1 = document.getElementById('val1');
+    var target1 = document.getElementById('value1');
+    var rangeValue = function (elem, target) {
+      return function(evt){
+        target.innerHTML = elem.value;
+      }
+    }
+    elem1.addEventListener('input', rangeValue(elem1, target1));
+
+    var elem2 = document.getElementById('val2');
+    var target2 = document.getElementById('value2');
+    elem2.addEventListener('input', rangeValue(elem2, target2));
+
+    var elem3 = document.getElementById('val3');
+    var target3 = document.getElementById('value3');
+    elem3.addEventListener('input', rangeValue(elem3, target3));
+
+    var elem4 = document.getElementById('val4');
+    var target4 = document.getElementById('value4');
+    elem4.addEventListener('input', rangeValue(elem4, target4));
+
+    var elem5 = document.getElementById('val5');
+    var target5 = document.getElementById('value5');
+    elem5.addEventListener('input', rangeValue(elem5, target5));
+    
+    var elem6 = document.getElementById('val6');
+    var target6 = document.getElementById('value6');
+    elem6.addEventListener('input', rangeValue(elem6, target6));
+    
+    var elem7 = document.getElementById('val7');
+    var target7 = document.getElementById('value7');
+    elem7.addEventListener('input', rangeValue(elem7, target7));
+  </script>
+</body>
+</html>
